@@ -107,6 +107,12 @@
 *   **Smart Feature:** Automatically finds cover art (`cover.jpg`, `folder.jpg`, or matching filenames) and embeds it into the MP3.
 *   **Safety:** Saves to a `converted\` subfolder.
 
+### `batch_image_convert.bat`
+**The "Webmaster" Tool.**
+*   **Input:** Drag & Drop a **Folder** of images.
+*   **Action:** Converts everything (HEIC, WEBP, AVIF, BMP, TIFF) into standard **JPG** or **PNG**.
+*   **Requirement:** Needs [ImageMagick](https://imagemagick.org/script/download.php) installed.
+
 ---
 
 ## ⚙️ General Usage Guide
