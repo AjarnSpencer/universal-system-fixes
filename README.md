@@ -79,6 +79,16 @@ This section contains tools specifically designed to fix "No Audio," "Driver Err
 
 ## 🌐 Network & Internet
 
+### `wifi_password_revealer.bat` (The "Forgot Password" Tool)
+**Best for:** When you get a new phone and need to connect it to the Wi-Fi, but you forgot the password.
+*   **What it does:** 
+    *   Scans the Windows registry for all saved Wi-Fi networks.
+    *   Decrypts the stored keys.
+    *   Generates a text file (`My_WiFi_Passwords.txt`) listing every network name and its password.
+*   **How to use:**
+    *   Double-click the script.
+    *   It will automatically open a text file with your passwords.
+
 ### `fix_network_ultimate.bat` (The "Internet Button")
 **Best for:** When you have Wi-Fi but "No Internet", or websites are loading slowly.
 *   **What it does:** 
