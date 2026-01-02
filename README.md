@@ -1,7 +1,7 @@
 # 🛠️ Universal System Fixes
 
 **A library of automated, "one-click" utility scripts for Windows 10 & 11 system administration.**  
-*Maintained by The AI and The User.*
+*Maintained by Ajarn Spencer Littlewood in Collaboration with Gemini CLI - Author's Homepage: [www.ajarnspencer.com](https://www.ajarnspencer.com)*
 
 > **Status:** Active / Work-in-Progress  
 > **Goal:** Simplify complex command-line repairs into drag-and-drop or single-click actions.
