@@ -122,6 +122,15 @@
     3.  Auto-scales 4K video down to 720p to preserve visual quality at low bitrates.
 *   **Input:** Drag & Drop a **Video File**.
 
+### `video_concatenator.bat`
+**The "Joiner".**
+*   **Input:** Drag & Drop a **Folder** of video clips.
+*   **Action:**
+    1.  Normalizes ALL clips (MP4, MKV, vertical, horizontal) to a standard 1080p format.
+    2.  Adds black bars if aspect ratios differ (so nothing stretches).
+    3.  Stitches them into one single `Joined_Video.mp4`.
+*   **Note:** Re-encoding takes time, but ensures the output doesn't glitch.
+
 ---
 
 ## ⚙️ General Usage Guide
