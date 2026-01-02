@@ -1,139 +1,100 @@
 # 🛠️ Universal System Fixes
 
-A collection of automated utility scripts for Windows system administration, designed to resolve common hardware and software issues with a single click.
+**A library of automated, "one-click" utility scripts for Windows 10 & 11 system administration.**  
+*Maintained by The AI and The User.*
 
-> **Note:** This repository is a work-in-progress. New scripts will be added as they are developed.
-
----
-
-## 🔊 Windows Audio Repair Suite
-
-This section contains tools specifically designed to fix "No Audio," "Driver Error," or "Red X on Volume Icon" issues on Windows 10/11.
-
-### 🚀 Recommended Script
-
-#### 1. `fix_audio_ultimate.bat` (The "Nuclear" Option)
-**Best for:** Most users. Works on Realtek, Intel, NVIDIA, AMD, and Generic High Definition Audio.
-*   **What it does:**
-    *   Stops all Windows Audio services (`Audiosrv`, `AudioEndpointBuilder`).
-    *   Scans for audio devices from *all* major vendors (Realtek, Intel, NVIDIA, AMD).
-    *   Intelligently filters out non-audio hardware (like Ethernet cards) to prevent accidents.
-    *   Removes the glitchy driver instances.
-    *   Forces Windows to reinstall the correct drivers.
-    *   Restarts the audio subsystem.
-*   **Use this if:** You don't know exactly what sound card you have, or if other fixes haven't worked.
+> **Status:** Active / Work-in-Progress  
+> **Goal:** Simplify complex command-line repairs into drag-and-drop or single-click actions.
 
 ---
 
-### 📂 Other Variants
+## 📖 Table of Contents
 
-#### 2. `fix_audio_universal.bat` (Realtek Portable)
-**Best for:** Systems specifically known to use Realtek Audio.
-*   **What it does:** 
-    *   Dynamically searches for "Realtek" audio devices (does not use hardcoded IDs).
-    *   Removes and reinstalls them.
-    *   Restarts audio services.
-*   **Use this if:** You have a Realtek card and want a slightly faster, more targeted fix than the "Ultimate" version.
-
-#### 3. `fix_audio.bat` (Legacy / Specific)
-**Best for:** Debugging or Reference.
-*   **What it does:** Targets a *specific* Hardware Instance ID found on Acer Nitro laptops.
-*   **Use this if:** You are the original author of this repository or have the exact same hardware configuration. **Likely won't work on other machines.**
+*   [🔊 Audio Repair](#-audio-repair) (Fix "No Sound" / Driver glitches)
+*   [🌐 Network & Internet](#-network--internet) (Fix Wi-Fi / DNS issues)
+*   [🛠️ Critical System Maintenance](#-critical-system-maintenance) (Fix BSOD / Updates / GPU freezes)
+*   [🎵 Media Conversion](#-media-conversion) (MP3 / Video Tools)
+*   [⚙️ General Usage Guide](#-general-usage-guide)
 
 ---
 
-## 📖 How to Use
+## 🔊 Audio Repair
 
-1.  **Download** the script you need (or the whole repository).
-2.  **Right-Click** the `.bat` file.
-3.  Select **"Run as Administrator"**.
-    *   *Why?* resetting drivers requires system-level permissions. The script will fail if you just double-click it.
-4.  Follow the on-screen prompts.
-5.  **Restart your computer** if the sound doesn't return immediately.
+**Target:** Realtek, Intel, NVIDIA, AMD, and Generic High Definition Audio drivers.
 
----
+### 1. `fix_audio_ultimate.bat` (Recommended)
+**The "Nuclear" Option.** Use this if your sound stops working randomly.
+*   **Action:** Force-stops audio services, nukes the driver instance for *all* major audio vendors, and forces Windows to reinstall them from scratch.
+*   **Fixes:** Red X on volume icon, "No Audio Device Installed", Static/Crackling.
 
-## 🛠️ System Maintenance
-
-### `restart_gpu_driver.bat` (The "Black Screen" Fix)
-**Best for:** When your screen freezes, a game crashes, or you see weird "artifacts" on your monitor.
-*   **What it does:** 
-    *   Locates all active Graphics Cards (NVIDIA, AMD, Intel).
-    *   Forcefully restarts the driver service without rebooting the PC.
-    *   Note: Your screen will flicker black for a moment during this process.
-*   **How to use:**
-    *   Right-Click -> **Run as Administrator**.
-
-### `system_health_restore.bat` (The "Doctor")
-**Best for:** Blue Screens of Death (BSOD), random crashes, or weird Windows glitches.
-*   **What it does:** Runs the "Holy Trinity" of Windows repair commands in the correct order:
-    1.  `DISM /CheckHealth` (Diagnostics)
-    2.  `DISM /RestoreHealth` (Downloads fresh copies of corrupted system files from Microsoft).
-    3.  `SFC /ScanNow` (Replaces the bad files with the fresh ones).
-*   **How to use:**
-    *   Right-Click -> **Run as Administrator**.
-    *   **Be Patient:** This takes 15-45 minutes.
-
-### `nuke_windows_update_cache.bat` (The "Stuck Update" Fix)
-**Best for:** When Windows Update is stuck at "0%" or "Downloading..." forever.
-*   **What it does:** 
-    *   Stops the 4 core Windows Update services (`wuauserv`, `bits`, `cryptSvc`, `msiserver`).
-    *   Renames the `SoftwareDistribution` and `catroot2` folders (where corrupted update files live).
-    *   Restarts the services, forcing Windows to download fresh, clean update files.
-*   **How to use:**
-    *   Right-Click -> **Run as Administrator**.
-    *   Once done, go to Settings -> Windows Update -> **Check for Updates**.
+### 2. `fix_audio_universal.bat`
+**The "Portable" Realtek Fix.**
+*   **Action:** Specifically targets Realtek devices using dynamic detection. Less aggressive than the Ultimate version.
 
 ---
 
 ## 🌐 Network & Internet
 
-### `wifi_password_revealer.bat` (The "Forgot Password" Tool)
-**Best for:** When you get a new phone and need to connect it to the Wi-Fi, but you forgot the password.
-*   **What it does:** 
-    *   Scans the Windows registry for all saved Wi-Fi networks.
-    *   Decrypts the stored keys.
-    *   Generates a text file (`My_WiFi_Passwords.txt`) listing every network name and its password.
-*   **How to use:**
-    *   Double-click the script.
-    *   It will automatically open a text file with your passwords.
+**Target:** Wi-Fi Adapters, Ethernet, DNS Settings.
 
-### `fix_network_ultimate.bat` (The "Internet Button")
-**Best for:** When you have Wi-Fi but "No Internet", or websites are loading slowly.
-*   **What it does:** 
-    *   Flushes DNS Cache (fixes "Page not found" errors).
-    *   Resets Winsock & TCP/IP Stack (rebuilds the core Windows network protocols).
-    *   Releases and Renews your IP address from the router.
-*   **How to use:**
-    *   Right-Click -> **Run as Administrator**.
-    *   Wait for it to finish (your internet will cut out briefly).
-    *   (Optional but recommended) Restart your PC.
+### 1. `fix_network_ultimate.bat`
+**The "Internet Button".** Use this if you are connected to Wi-Fi but have "No Internet".
+*   **Action:**
+    *   Flushes DNS Cache (`ipconfig /flushdns`)
+    *   Resets Winsock Catalog (`netsh winsock reset`)
+    *   Resets TCP/IP Stack (`netsh int ip reset`)
+    *   Clears ARP Cache
+*   **Result:** A completely fresh network connection state.
+
+### 2. `wifi_password_revealer.bat`
+**The "Memory Jogger".** Use this if you forgot a Wi-Fi password.
+*   **Action:** Scans system registry for saved profiles, decrypts the keys, and exports a text file (`My_WiFi_Passwords.txt`) with all your saved passwords.
+*   **Note:** Does NOT require Admin privileges.
 
 ---
 
-## 🎵 Audio & Media Tools
+## 🛠️ Critical System Maintenance
 
-### 🌟 `universal_media_to_mp3.bat` (The "One-Stop" Converter)
-**Best for:** Everyone.
-*   **What it does:** 
-    *   Takes **ANYTHING** (Video or Audio) and turns it into a high-quality MP3.
-    *   **Supported Inputs:** MKV, MP4, AVI, WAV, FLAC, M4A, OGG, WMA, and more.
-    *   **Smart Art Embedding:** Automatically finds cover art (checking for `SongName.jpg`, then `cover.jpg`, then *any* image) and stitches it into the MP3.
-    *   **Safety First:** Creates a `converted\` folder so it never overwrites your original files.
-*   **How to use:**
-    *   Drag a **File** or a **Folder** onto the script. Done.
+**Target:** Windows Update, System Files, GPU Drivers.
 
-### `embed_cover_mp3.bat` (Legacy)
-*   *Note: This script has been superseded by the Universal version above, but is kept for reference.*
+### 1. `system_health_restore.bat`
+**The "Doctor".** Use this for BSODs, random crashes, or missing system files.
+*   **Action:** Runs the "Holy Trinity" of repairs in the correct order:
+    1.  `DISM /CheckHealth` (Diagnostics)
+    2.  `DISM /RestoreHealth` (Downloads fresh system files from Microsoft)
+    3.  `SFC /ScanNow` (Installs the repairs)
+*   **Time:** ~15-45 minutes.
+
+### 2. `nuke_windows_update_cache.bat`
+**The "Stuck Update" Fix.** Use this if Windows Update hangs at 0%.
+*   **Action:** Stops update services, renames the corrupted `SoftwareDistribution` and `catroot2` folders (forcing a fresh download), and restarts services.
+
+### 3. `restart_gpu_driver.bat`
+**The "Black Screen" Fix.** Use this if your screen freezes or flickers.
+*   **Action:** Uses `pnputil` to find and restart your Graphics Driver (NVIDIA/AMD/Intel) *without* rebooting the entire computer.
+
+---
+
+## 🎵 Media Conversion
+
+**Target:** Audio/Video Files (FFmpeg required).
+
+### 🌟 `universal_media_to_mp3.bat`
+**The "One-Stop" Converter.**
+*   **Input:** Drag & Drop **ANY** file (MKV, MP4, WAV, FLAC, MOV, etc.) or **Folder**.
+*   **Output:** High-Quality MP3 (320kbps).
+*   **Smart Feature:** Automatically finds cover art (`cover.jpg`, `folder.jpg`, or matching filenames) and embeds it into the MP3.
+*   **Safety:** Saves to a `converted\` subfolder.
 
 ---
 
-## ⚠️ Disclaimer
+## ⚙️ General Usage Guide
 
-These scripts modify system drivers. While they are designed to be safe by forcing Windows to "redetect" hardware (a standard troubleshooting step), you use them at your own risk.
+Most scripts in this library perform system-level operations.
 
-*   Always ensure your work is saved before running system tools.
-*   These scripts are designed for **Windows 10 and Windows 11**.
+1.  **Download** the script or the repository.
+2.  **Right-Click** the script.
+3.  Select **Run as Administrator**. (Crucial for Audio, Network, and System fixes).
+4.  Follow the on-screen prompts.
 
----
-*Maintained by The AI and The User.*
+> **Disclaimer:** These tools use standard Windows troubleshooting commands (`netsh`, `pnputil`, `dism`). They are safe for 99% of systems, but always use them at your own risk.
