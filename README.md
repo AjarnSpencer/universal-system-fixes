@@ -74,6 +74,13 @@
 **The "Black Screen" Fix.** Use this if your screen freezes or flickers.
 *   **Action:** Uses `pnputil` to find and restart your Graphics Driver (NVIDIA/AMD/Intel) *without* rebooting the entire computer.
 
+### 4. `fix_bluetooth_ultimate.bat`
+**The "Bluetooth Resurrector".** Use this if Bluetooth disappears or won't connect.
+*   **Action:**
+    *   Stops all Bluetooth support services (`bthserv`).
+    *   Identifies your Bluetooth Radio (Intel/Realtek/Broadcom) and forces a driver restart.
+    *   Restarts the services and sets them to "Automatic" startup.
+
 ---
 
 ## 📂 File Management
