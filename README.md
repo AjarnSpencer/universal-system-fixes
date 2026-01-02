@@ -13,6 +13,7 @@
 *   [🔊 Audio Repair](#-audio-repair) (Fix "No Sound" / Driver glitches)
 *   [🌐 Network & Internet](#-network--internet) (Fix Wi-Fi / DNS issues)
 *   [🛠️ Critical System Maintenance](#-critical-system-maintenance) (Fix BSOD / Updates / GPU freezes)
+*   [🧹 Clean & Optimize](#-clean--optimize) (Icons / Search / RAM / Bloat)
 *   [📂 File Management](#-file-management) (Organize / Analyze)
 *   [🎵 Media Conversion](#-media-conversion) (MP3 / Video Tools)
 *   [⚙️ General Usage Guide](#-general-usage-guide)
@@ -20,6 +21,47 @@
 ---
 
 ## 🔊 Audio Repair
+*(See above for Audio tools)*
+
+---
+
+## 🛠️ Critical System Maintenance
+*(See above for GPU/Network tools)*
+
+### 5. `fix_printer_spooler.bat`
+**The "Stuck Printer" Fix.**
+*   **Action:** Stops the Print Spooler, forcibly deletes stuck `.SPL` files from the system spool directory, and restarts the service.
+*   **Fixes:** "Printing..." stuck forever, or cannot delete print jobs.
+
+---
+
+## 🧹 Clean & Optimize
+
+**Target:** Performance, Visual Glitches, and Search.
+
+### 1. `fix_corrupted_icons.bat`
+**The "White Icon" Fix.**
+*   **Action:** Kills Explorer, deletes the hidden `IconCache.db` and thumbnail caches, and restarts Explorer.
+*   **Fixes:** Blank white page icons, wrong app icons.
+
+### 2. `reset_windows_search.bat`
+**The "Search Fix".**
+*   **Action:** Stops the Windows Search service (`wsearch`) and deletes the search index database (`Windows.edb`), forcing a fresh rebuild.
+*   **Fixes:** Blank Start Menu search results.
+
+### 3. `clear_standby_memory.bat`
+**The "RAM Cleaner".**
+*   **Action:** Flushes the System File Cache via PowerShell to release "Standby" RAM back to the free pool.
+*   **Fixes:** Stuttering in games caused by lack of free RAM.
+
+### 4. `disable_telemetry_bloat.bat`
+**The "Privacy" Tool.**
+*   **Action:** Disables "Connected User Experiences and Telemetry" (`DiagTrack`) and "Data Collection" services.
+*   **Fixes:** High CPU usage by background telemetry processes.
+
+---
+
+## 📂 File Management
 
 **Target:** Realtek, Intel, NVIDIA, AMD, and Generic High Definition Audio drivers.
 
