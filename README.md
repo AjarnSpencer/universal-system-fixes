@@ -53,6 +53,21 @@ This section contains tools specifically designed to fix "No Audio," "Driver Err
 
 ---
 
+## 🌐 Network & Internet
+
+### `fix_network_ultimate.bat` (The "Internet Button")
+**Best for:** When you have Wi-Fi but "No Internet", or websites are loading slowly.
+*   **What it does:** 
+    *   Flushes DNS Cache (fixes "Page not found" errors).
+    *   Resets Winsock & TCP/IP Stack (rebuilds the core Windows network protocols).
+    *   Releases and Renews your IP address from the router.
+*   **How to use:**
+    *   Right-Click -> **Run as Administrator**.
+    *   Wait for it to finish (your internet will cut out briefly).
+    *   (Optional but recommended) Restart your PC.
+
+---
+
 ## 🎵 Audio & Media Tools
 
 ### 🌟 `universal_media_to_mp3.bat` (The "One-Stop" Converter)
