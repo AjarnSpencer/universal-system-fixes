@@ -13,6 +13,7 @@
 *   [🔊 Audio Repair](#-audio-repair) (Fix "No Sound" / Driver glitches)
 *   [🌐 Network & Internet](#-network--internet) (Fix Wi-Fi / DNS issues)
 *   [🛠️ Critical System Maintenance](#-critical-system-maintenance) (Fix BSOD / Updates / GPU freezes)
+*   [📂 File Management](#-file-management) (Organize / Analyze)
 *   [🎵 Media Conversion](#-media-conversion) (MP3 / Video Tools)
 *   [⚙️ General Usage Guide](#-general-usage-guide)
 
@@ -72,6 +73,19 @@
 ### 3. `restart_gpu_driver.bat`
 **The "Black Screen" Fix.** Use this if your screen freezes or flickers.
 *   **Action:** Uses `pnputil` to find and restart your Graphics Driver (NVIDIA/AMD/Intel) *without* rebooting the entire computer.
+
+---
+
+## 📂 File Management
+
+**Target:** Messy folders (Downloads, Desktop, etc.)
+
+### 1. `auto_organize_folder.bat`
+**The "Declutterer".**
+*   **Action:** Sorts files into `Images`, `Videos`, `Documents`, `Installers`, `Archives`, and `Audio` based on their extension.
+*   **How to use:**
+    *   **Drag & Drop** a messy folder onto the script.
+    *   OR place the script *inside* the messy folder and double-click it.
 
 ---
 
