@@ -113,6 +113,15 @@
 *   **Action:** Converts everything (HEIC, WEBP, AVIF, BMP, TIFF) into standard **JPG** or **PNG**.
 *   **Requirement:** Needs [ImageMagick](https://imagemagick.org/script/download.php) installed.
 
+### `video_compressor_whatsapp.bat`
+**The "Shareable" Tool.**
+*   **Best for:** Sending videos via WhatsApp, Discord, or Email without hitting size limits.
+*   **Action:**
+    1.  Calculates the exact bitrate needed to fit your video under 25MB (or 100MB).
+    2.  Compresses the file using optimized settings (H.264).
+    3.  Auto-scales 4K video down to 720p to preserve visual quality at low bitrates.
+*   **Input:** Drag & Drop a **Video File**.
+
 ---
 
 ## ⚙️ General Usage Guide
