@@ -55,6 +55,16 @@ This section contains tools specifically designed to fix "No Audio," "Driver Err
 
 ## 🛠️ System Maintenance
 
+### `system_health_restore.bat` (The "Doctor")
+**Best for:** Blue Screens of Death (BSOD), random crashes, or weird Windows glitches.
+*   **What it does:** Runs the "Holy Trinity" of Windows repair commands in the correct order:
+    1.  `DISM /CheckHealth` (Diagnostics)
+    2.  `DISM /RestoreHealth` (Downloads fresh copies of corrupted system files from Microsoft).
+    3.  `SFC /ScanNow` (Replaces the bad files with the fresh ones).
+*   **How to use:**
+    *   Right-Click -> **Run as Administrator**.
+    *   **Be Patient:** This takes 15-45 minutes.
+
 ### `nuke_windows_update_cache.bat` (The "Stuck Update" Fix)
 **Best for:** When Windows Update is stuck at "0%" or "Downloading..." forever.
 *   **What it does:** 
