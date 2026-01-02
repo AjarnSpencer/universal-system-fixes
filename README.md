@@ -53,6 +53,20 @@ This section contains tools specifically designed to fix "No Audio," "Driver Err
 
 ---
 
+## 🎵 Audio Tools
+
+### `embed_cover_mp3.bat` (The "Stitcher")
+**Best for:** Musicians, Podcasters, and Archivists.
+*   **What it does:** 
+    *   Converts audio (WAV, FLAC, M4A) to high-quality MP3 (320kbps).
+    *   **Auto-Magically** finds any image (JPG, PNG) in the same folder and embeds it as the MP3 Album Art.
+    *   No need to name files specifically. It just grabs the first image it finds.
+*   **How to use:**
+    *   Drag an **Audio File** onto the script -> Converts that file using any image in its folder.
+    *   Drag a **Folder** onto the script -> Converts ALL audio files in that folder.
+
+---
+
 ## ⚠️ Disclaimer
 
 These scripts modify system drivers. While they are designed to be safe by forcing Windows to "redetect" hardware (a standard troubleshooting step), you use them at your own risk.
