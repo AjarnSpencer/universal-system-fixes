@@ -55,6 +55,15 @@ This section contains tools specifically designed to fix "No Audio," "Driver Err
 
 ## 🛠️ System Maintenance
 
+### `restart_gpu_driver.bat` (The "Black Screen" Fix)
+**Best for:** When your screen freezes, a game crashes, or you see weird "artifacts" on your monitor.
+*   **What it does:** 
+    *   Locates all active Graphics Cards (NVIDIA, AMD, Intel).
+    *   Forcefully restarts the driver service without rebooting the PC.
+    *   Note: Your screen will flicker black for a moment during this process.
+*   **How to use:**
+    *   Right-Click -> **Run as Administrator**.
+
 ### `system_health_restore.bat` (The "Doctor")
 **Best for:** Blue Screens of Death (BSOD), random crashes, or weird Windows glitches.
 *   **What it does:** Runs the "Holy Trinity" of Windows repair commands in the correct order:
