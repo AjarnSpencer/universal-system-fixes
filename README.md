@@ -53,6 +53,20 @@ This section contains tools specifically designed to fix "No Audio," "Driver Err
 
 ---
 
+## 🛠️ System Maintenance
+
+### `nuke_windows_update_cache.bat` (The "Stuck Update" Fix)
+**Best for:** When Windows Update is stuck at "0%" or "Downloading..." forever.
+*   **What it does:** 
+    *   Stops the 4 core Windows Update services (`wuauserv`, `bits`, `cryptSvc`, `msiserver`).
+    *   Renames the `SoftwareDistribution` and `catroot2` folders (where corrupted update files live).
+    *   Restarts the services, forcing Windows to download fresh, clean update files.
+*   **How to use:**
+    *   Right-Click -> **Run as Administrator**.
+    *   Once done, go to Settings -> Windows Update -> **Check for Updates**.
+
+---
+
 ## 🌐 Network & Internet
 
 ### `fix_network_ultimate.bat` (The "Internet Button")
